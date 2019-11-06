@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- aNIMATED TOGGLE -->
+    <script type="text/javascript">
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        $('.stat-number').each(function() {
+            var size = $(this).text().split(".")[1] ? $(this).text().split(".")[1].length : 0;
+            $(this).prop('Counter', 0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 2000,
+                step: function(func) {
+                    $(this).text(parseFloat(func).toFixed(size));
+                }
+            });
+        });
+    </script>
+    <style type="text/css">
+        .phase1 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-content: center;
+           
+        }
+/*          .phase3 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            align-content: center;
+            position: sticky;
+        }*/
+    </style>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styleH.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Raleway&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styleCountUp.css">
+    <link rel="stylesheet" type="text/css" href="homeNewsStyle.css">
+    <title>STCEX Conference</title>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <header>
+        <div class="announcement">
+
+            <h1>STCEX</h1>
+            <!-- <p>The Ninth Saudi Technical Conference and Exhibition (STCEX 2019) provides a platform for bringing together a select group of distinguished international and local experts to exchange ideas, experiences, and initiatives about the 21st century skills and their associated new developments and future trends in the field of Technical and Vocational Education and Training (TVET); with the aim of advancing ongoing TVET’s development efforts in KSA and enhancing its contribution to the achievement of KSA-Vision (2030) aspirations.</p> -->
+            <!-- Count Down Timer -->
+
+            <main class="count-down">
+
+                <div class="display-date">
+                    <div class="days">
+                        <h3 class="countdown-days"></h3>
+                        <span>Days</span>
+                    </div>
+                    <div class="hours">
+                        <h3 class="countdown-hours"></h3>
+                        <span>Hrs</span>
+                    </div>
+                    <div class="minutes">
+                        <h3 class="countdown-minutes"></h3>
+                        <span>Min</span>
+                    </div>
+                    <div class="seconds">
+                        <h3 class="countdown-seconds"></h3>
+                        <span>Sec</span>
+                    </div>
+                </div>
+            </main>
+
+            <!-- End Count Down Timer -->
+            <h6>#STCEX  #STCEX_2020</h6>
+        </div>
+        <div class="Menu" id="myHeader">
+            <div class="logo">
+                <a id="without_hover" href="https://tvtc.gov.sa/Arabic/Departments/FacultyCouncils/stcex8/Pages/default.aspx" target="_blank"><img src="./img/logo.png" alt="STCEX" /></a>
+                <a id="without_hover" href="https://vision2030.gov.sa/ar/node" target="_blank"><img src="./img/vision2030.png" alt="Saudi_Vision_2030_logo" /></a>
+                <a id="without_hover" href="https://www.tvtc.gov.sa/_layouts/15/TVTCWeb/default-Ar.aspx" target="_blank"><img src="./img/TVTC.png" alt="TVTC" /></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <div class="dropdown">
+                        <li class="dropbtn">Program</li>
+                        <div class="dropdown-content">
+                            <a href="Workshop.html" target="_blank">Workshop</a>
+                            <a href="Session.html" target="_blank">Session</a>
+                        </div>
+
+                    </div>
+                    <div class="dropdown">
+                        <li class="dropbtn">History</li>
+                        <div class="dropdown-content">
+                            <a href="https://www.tvtc.gov.sa/Arabic/Departments/FacultyCouncils/stcex8/Pages/default.aspx" target="_blank">2016</a>
+                            <a href="https://www.tvtc.gov.sa/Arabic/Departments/FacultyCouncils/stcex1/Pages/default.aspx" target="_blank">2014</a>
+                        </div>
+                    </div>
+                    <li><a href="#" id="Arabic">العربية</a></li>
+                    <li>
+                        <a href="#"><img src="./img/User_Account.png" alt="User"></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- menu toggle for responsive  -->
+        <div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+
+    <!-- Content -->
+    <div class="phase1">
+        <!-- Count Up  -->
+        <div class="countUp">
+
+            <div class="stat-wrap">
+                <div>
+                    <img src="./img/days.jpg" alt="Days" />
+                    <span class="stat-number">3</span>
+                    <h6> Days</h6>
+
+                </div>
+                <div>
+                    <img src="./img/Visitor.png" alt="Visitors"> Visitors
+                    <span class="stat-number">4000</span>
+                </div>
+                <div>
+                    <img src="./img/sessions.png" alt="Session"> Sessions
+                    <span class="stat-number">30</span>
+                </div>
+                <div>
+                    <img src="./img/speakers.png" alt="Speaker"> Speaker
+                    <span class="stat-number">30</span>
+                </div>
+            </div>
+        </div>
+        <!-- News -->
+        <!--News card -->
+
+        <div class="container2">
+            <marquee behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();">
+                <div class="div1">
+
+                    <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="./img/3.gif" alt="stcex" class="d-block w-full">
+
+                        <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                                TCTC STCEX
+                            </p>
+
+                            <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+       TVTC launch STCEX  </h1>
+
+                            <p class="mb-1">
+                                The 9th Saudi Technical Conference &hellip;
+                            </p>
+
+                        </div>
+
+                        <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+    Read More
+  </a>
+                    </div>
+                </div>
+
+                <!-- second -->
+                <div class="div1">
+
+                    <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 100%; height: 100%; overflow: hidden; border-radius: 1px;">
+                        <img src="./img/news2.png" alt="stcex" class="d-block w-full">
+
+                        <div class="px-2 py-2">
+                            <p class="mb-0 small font-weight-medium text-uppercase mb-1 text-muted lts-2px">
+                                TCTC STCEX
+                            </p>
+
+                            <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+       TVTC launch STCEX
+    </h1>
+
+                            <p class="mb-1">
+                                The 9th Saudi Technical Conference &hellip;
+                            </p>
+
+                        </div>
+                        <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+    Read More
+  </a>
+                    </div>
+                </div>
+            </marquee>
+        </div>
+        <!-- End news card -->
+    </div>
+    <!-- End phase 1 -->
+
+    <!-- phase 2  -->
+
+
+    <!-- End phase 2 -->
+
+
+    <!-- phase 3  -->
+<!-- 
+ <div class="phase3">
+<div class= "phase3SocialMedia">
+    <div class="flex-container">
+    <div class ="SocialMediaRes">
+    <ul>
+        <li>
+            <a rel="float-shadow" href="https://twitter.com" target="_blank">
+                <img src="./img/twitter.png" alt="STCEX twitter" title="TCEX twitter">
+            </a>
+        </li>
+        <li>
+            <a href="https://maps.google.com/?q=46.860191,3.779297" target="_blank">
+                <img src="./img/map.png" alt="STCEX on Google Map" title="STCEX on Google Map">
+            </a>
+        </li>
+        <li>
+            <a href="https://facebook.com" target="_blank">
+                <img src="./img/facebook.png" alt="STCEX facebook" title="STCEX facebook">
+            </a>
+        </li>
+        <li>
+            <a href="https://facebook.com" target="_blank">
+                <img src="./img/call_360.png" alt="STCEX phone" title="STCEX phone">
+            </a>
+        </li>
+        <li>
+            <a href="mailto:someone@example.com?Subject=Hello%20again" target="_blank">
+                <img src="./img/mail.png" alt="STCEX mail" title="STCEX mail">
+            </a>
+        </li>
+    </ul>
+    </div>
+</div>
+
+</div>
+
+  </div>
+ -->
+        <!-- End phase 3 -->
+    <div class="phase1"> </div>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+    <h1>Content</h1>
+    <br>
+
+    <script type="text/javascript">
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        // Get the header
+        var header = document.getElementById("myHeader");
+
+        // Get the offset position of the navbar
+        var sticky = header.offsetTop;
+
+        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <script type="text/javascript">
+        //SETUP COUNTDOWN FUNCTION
+        function countdown(endDate) {
+            //SET VARIABLES
+            let days, hours, minutes, secondes;
+
+            //DATE
+            endDate = new Date(endDate).getTime();
+
+            //RUN CALCTIME FUNCTION EACH SECOND
+            setInterval(calcTime, 1000);
+
+            //SETUP CALCTIME FUNCTION
+            function calcTime() {
+                //TODAY [ CURRENT DATE ]
+                let today = new Date().getTime();
+
+                //TIME REMAINING BETWEEN THE CURRENT DATE AND END DATE.
+                let timeRemaining = parseInt((endDate - today) / 1000);
+
+                if (timeRemaining >= 0) {
+                    //GET DAYS [ DAY = 86400 SECONDS ]
+                    days = parseInt(timeRemaining / 86400);
+                    timeRemaining = timeRemaining % 86400;
+
+                    //GET HOURS [ HOUR = 3600 SECONDS ]
+                    hours = parseInt(timeRemaining / 3600);
+                    timeRemaining = timeRemaining % 3600;
+
+                    //GET MINUTES [ MIN = 60 SECONDS  ]
+                    minutes = parseInt(timeRemaining / 60);
+                    timeRemaining = timeRemaining % 60;
+
+                    //GET SECONDS
+                    secondes = parseInt(timeRemaining);
+
+                    //SELECT ELEMENTS
+                    const countDays = document.querySelector('.countdown-days');
+                    const countHours = document.querySelector('.countdown-hours');
+                    const countMinutes = document.querySelector('.countdown-minutes');
+                    const countSeconds = document.querySelector('.countdown-seconds');
+
+                    //SETUP ADDZERO FUNCTION
+                    function addZero(n) {
+                        return n < 10 ? '0' + n : n;
+                    }
+
+                    //RESULT
+                    countDays.textContent = addZero(days);
+                    countHours.textContent = addZero(hours);
+                    countMinutes.textContent = addZero(minutes);
+                    countSeconds.textContent = addZero(secondes);
+                } else {
+                    clearInterval(calcTime);
+                }
+            }
+        }
+
+        //SET THE END DATE
+        countdown('2020/05/20 00:00:00');
+    </script>
+</body>
+<!-- Footer -->
+<footer class="footer">
+    <p id="footerRights"> Copyright © TVTC </p>
+</footer>
+<script src="javascript1.js"></script>
+
+</html>

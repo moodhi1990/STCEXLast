@@ -1,0 +1,473 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+header {
+    top: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f6f6;
+    box-shadow: 5px 5px 5px #00000012;
+    position: fixed;
+    height: 10%;
+    z-index: 10000000;
+
+}
+body{
+  height: 90%;
+  background-color: rgba(241, 246, 246, 0.3);
+}
+header .logo {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+.logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+}
+header nav {
+    width: 60%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:  2%;
+
+}
+header nav ul {
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+     flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+
+header nav ul li {
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+}
+
+header nav ul li a {
+    margin-right: 2%;
+    color: gray;
+    font-size: 1.7em;
+    text-decoration: none;
+    display: block;
+}
+
+nav img {
+    width: 40px;
+    height: auto;
+}
+#Arabic {
+   color: #95babd;
+   font-weight: bolder;
+}
+/* hyper Link Hover */
+a::after {
+   content: '';
+   display: block;
+   width: 0;
+   height: 4px;
+   background: #E89D01;
+   transition: width .4s;
+}
+a:hover::after {
+   width: 100%;
+   transition: width .4s;
+}
+#without_hover:hover::after{
+ width:0%;
+}
+/*End hyper Link Hover */
+.dropdown {
+   float: left;
+   overflow: hidden;
+   padding: 0;
+
+
+}
+.dropdown .dropbtn {
+   border: none;
+   outline: none;
+   color: gray;
+   font-size: 1.7em;
+   background-color: inherit;
+   font-family: inherit;
+   margin: 0;
+   padding: 0;
+     z-index: 100;
+
+}
+.dropdown-content {
+   display: none;
+   position: absolute;
+   top:50px;
+   background-color: #f1f6f6;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px #00000012;
+z-index: -100;
+}
+
+.dropdown-content a {
+   display: block;
+   color: gray;
+   font-size: 0.7em;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   z-index: -10;
+}
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+   .container {
+ display: none;
+ cursor: pointer;
+margin-right: 10%;
+}
+.bar1, .bar2, .bar3 {
+ width: 35px;
+ height: 5px;
+ background-color: grey;
+ margin: 6px 0;
+ transition: 0.4s;
+}
+.change .bar1 {
+ -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+ transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+ -webkit-transform: rotate(45deg) translate(-8px, -8px);
+ transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/*smaert PHONE*/
+@media (max-width: 768px) {
+
+header .logo {
+    width: 50%;
+
+
+}
+   .logo img {
+       width: 45px;
+       height: auto;
+       margin: 2px;
+
+
+   }
+.container {
+    display: none;
+}
+   header nav {
+      display: none;
+}
+}
+
+/*Taplets*/
+@media (max-width: 900px) {
+
+.logo {
+    width: 60%;
+
+
+      margin-right: 20%;
+
+}
+   .logo img {
+       width: 45px;
+       height: auto;
+       margin: 2px;
+
+
+   }
+.container {
+    display: block;
+}
+   header nav {
+      display: none;
+}
+}
+
+/* laptop */
+@media (max-width: 1200px) ){
+
+.logo {
+    width: 60%;
+
+border: 2px solid red;
+      margin-right: 20%;
+
+}
+   .logo img {
+       width: 45px;
+       height: auto;
+       margin: 2px;
+
+
+   }
+
+   header nav {
+       position: absolute;
+       width: 100%;
+       height: calc(100vh-50px);
+       background-color: #f1f6f6;
+       top: 50px;
+       left: -100%;
+       transition: 0.5s;
+       font-size: 1em;
+   }
+   header nav ul {
+       display: block;
+       text-align: center;
+   }
+   header nav ul li a {
+
+   }
+
+
+}
+
+
+/* Footer  100%*/
+/* responsive 100% */
+.footer {
+   background-color: #95babd;
+   padding: 0.1%;
+   text-align: center;
+}
+#footerRights {
+   font-size: 80%;
+   font-weight: 400;
+   margin-bottom: .5rem/!important/;
+   color: #6c757d/!important/;
+   text-align: center;
+   text-decoration: none;
+   color: white;
+   width: 100%;
+   letter-spacing: 2px;
+}
+/*/// about page updated by Moodhi*/
+  .aboutTitle {
+    text-align: center;
+    padding: 2%;
+
+  }
+  .aboutTitle h1 {
+    color:  #04817E;
+     }
+      .aboutTitle h2 {
+    color:    #626262;
+     }
+      .aboutTitle h3 {
+    color:  #E89D01;
+     }
+  .aboutContent {
+    margin: 2%;
+    font-family: "Times New Roman", Times, serif important;
+    letter-spacing: 1px;
+    color:  #626262;
+  }
+  .aboutContent li , ol, ul {
+    margin: 2%;
+     color:  black;
+  }
+
+  .aboutContent h3 {color:  #04817E;}
+  .form {
+  background: #f1f6f6;
+padding: 5%;
+max-width: 80%;
+margin: 10% auto;
+border-radius: 4px;
+box-shadow: 0 4px 10px 4px #00000012;
+}
+.form:hover {
+    box-shadow: 0px 0px 40px 16px #00000012;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  background-color: #E89D01;
+  border-radius: 20%;
+  display: inline-block;
+}
+hr { border-color: #D4EAD4; }
+
+/*//responsive about*/
+@media screen and (max-width: 900px)
+{
+    .form {
+  background: #f1f6f6;
+max-width: 100%;
+box-shadow: 0 4px 10px 4px #00000012;
+}
+ .aboutTitle {
+    text-align: center;
+    padding: 10%;
+
+  }
+}
+.Workshop {
+    /* background-color: #f1f6f6; */
+    background: #f1f6f6;
+    padding: 2%;
+    max-width: 80%;
+    margin: 10% auto;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px 4px #00000012;
+    text-align: center;
+    letter-spacing: 1.5px;
+
+}
+
+.Workshop:hover {
+    box-shadow: 0px 0px 40px 16px #00000012;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-align: center;
+}
+
+.Workshop caption {
+    font-size: 5em;
+    text-align: left;
+    color: #4B90AA;
+    margin-bottom: 3%;
+}
+
+.Workshop table {
+    width: 100%;
+    border-spacing: 0.5rem;
+    text-align: center;
+    display: table;
+    border-collapse: separate;
+    border-color: gray;
+}
+}
+
+.Workshop td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+thead td {
+    background: #4B90AA;
+    color: white;
+    font-size: 1.5em;
+    vertical-align: middle;
+    padding: 1%;
+}
+
+.Workshop button {
+    background-color: #4B90AA;
+    color: white;
+    font-size: 1.5em;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    margin: 0;
+    text-align: center;
+}
+
+thead:hover {
+    background: #4B90AA;
+}
+
+tr:hover {
+    background: #E89D01;
+}
+
+td img {
+    height: 45px;
+    width: 45px;
+}
+/* icon */
+span {
+    height: 20px;
+    width: 20px;
+    background-color: #E89D01;
+    border-radius: 20%;
+    display: inline-block;
+}
+@media (max-width: 900px)  {
+  .Workshop caption {
+      font-size: 2em;
+      text-align: left;
+      color: #4B90AA;
+      margin-top: 10%;
+      margin-bottom: 3%;
+  }
+  .Workshop {
+      max-width: 100%;
+    }
+    span {
+        height: 10px;
+        width: 10px;
+    }
+  table {
+    border: 0;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+}

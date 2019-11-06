@@ -1,0 +1,407 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+      background-color: rgba(241, 246, 246, 0.3);
+}
+header {
+    top: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  background-position: center;
+text-align: center;
+}
+ 
+ /*anooucement detail in the header */
+.announcement{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 90vh;
+  width: 100%;
+  background-image: url(./img/annoucement.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.announcement h1 {
+    color: #D4EAD4;
+    font-size: 12em;
+    letter-spacing: 5px;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+}
+
+.announcement p {
+    color: white;
+    font-size: 1.3em;
+    font-weight: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: justify;
+}
+
+.announcement h6 {
+    color: #D4EAD4;
+    font-size: 3em;
+    font-weight: normal;
+    margin: 0;
+
+}
+
+
+/*Menu bar*/
+.Menu{
+  width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*overflow: hidden;*/
+    background-color: #f1f6f6;
+    box-shadow: 5px 5px 5px #00000012;
+
+}
+
+.Menu .logo {
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding: 0;
+    margin-left: 2%;
+    margin-top: 1%;
+}
+.logo img {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+}
+.Menu nav {
+    width: 60%;
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:  2%;
+
+}
+.Menu nav ul {
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+     flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+
+.Menu nav ul li {
+    list-style: none;
+    display:flex;
+    justify-content: space-around;
+}
+
+.Menu nav ul li a {
+    margin-right: 2%;
+    color: gray;
+    font-size: 1.7em;
+    text-decoration: none;
+    display: block;
+}
+
+nav img {
+    width: 40px;
+    height: auto;
+}
+#Arabic {
+   color: #95babd;
+   font-weight: bolder;
+}
+/* hover */
+a::after {
+   content: '';
+   display: block;
+   width: 0;
+   height: 4px;
+   background: #E89D01;
+   transition: width .4s;
+}
+a:hover::after {
+   width: 100%;
+   transition: width .4s;
+}
+#without_hover:hover::after{
+ width:0%;
+}
+
+/* dropDown list */
+
+.dropdown {
+   float: left;
+   overflow: hidden;
+   padding: 0;
+ /*  position: relative;
+   display: inline-block;*/
+}
+.dropdown .dropbtn {
+   border: none;
+   outline: none;
+   color: gray;
+   font-size: 1.7em;
+   background-color: inherit;
+   font-family: inherit;
+   margin: 0;
+   padding: 0;
+   cursor: pointer;
+    /* z-index: 100;*/
+}
+.dropdown-content {
+   display: none;
+   position: absolute;
+     font-size: 1.7em;
+   top:75%;
+   background-color: #f1f6f6;
+   min-width: 160px;
+   box-shadow: 0px 8px 16px 0px #00000012;
+   word-wrap: break-word;
+/*z-index: 100000000000000;*/
+}
+
+.dropdown-content a {
+   display: block;
+   color: gray;
+   text-align: center;
+   padding: 10% 5%;
+   text-decoration: none;
+   z-index: -10000000000000000000;
+}
+.dropdown:hover .dropdown-content {
+   display: block;
+}
+/* dropdown Button */
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
+
+
+.container {
+display: none;
+cursor: pointer;
+margin-right: 10%;
+}
+.bar1, .bar2, .bar3 {
+width: 35px;
+height: 5px;
+background-color: grey;
+margin: 6px 0;
+transition: 0.4s;
+}
+.change .bar1 {
+-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+-webkit-transform: rotate(45deg) translate(-8px, -8px);
+transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* Footer  100%*/
+/* responsive 100% */
+.footer {
+   background-color: #95babd;
+   padding: 0.1%;
+   text-align: center;
+}
+#footerRights {
+   font-size: 80%;
+   font-weight: 400;
+   margin-bottom: .5rem/!important/;
+   color: #6c757d/!important/;
+   text-align: center;
+   text-decoration: none;
+   color: white;
+   width: 100%;
+   letter-spacing: 2px;
+}
+
+/*smaert PHONE*/
+@media (max-width: 768px) {
+
+header .logo {
+    width: 50%;
+
+
+}
+   .logo img {
+       width: 45px;
+       height: auto;
+       margin: 2px;
+
+
+   }
+.container {
+    display: none;
+}
+   header nav {
+      display: none;
+}
+}
+
+/*Taplets*/
+@media (max-width: 900px) {
+
+.logo {
+    width: 60%;
+
+
+      margin-right: 20%;
+
+}
+   .logo img {
+       width: 45px;
+       height: auto;
+       margin: 2px;
+
+
+   }
+.container {
+    display: block;
+}
+   header nav {
+      display: none;
+}
+}
+
+/* laptop */
+@media (max-width: 1200px) ){
+
+.logo {
+    width: 60%;
+
+border: 2px solid red;
+      margin-right: 20%;
+
+}
+   .logo img {
+       width: 45px;
+       height: auto;
+       margin: 2px;
+
+
+   }
+
+   header nav {
+       position: absolute;
+       width: 100%;
+       height: calc(100vh-50px);
+       background-color: #f1f6f6;
+       top: 50px;
+       left: -100%;
+       transition: 0.5s;
+       font-size: 1em;
+   }
+   header nav ul {
+       display: block;
+       text-align: center;
+   }
+   header nav ul li a {
+
+   }
+
+
+}
+/* count down */
+
+
+
+.count-down {
+    color: #E89D01;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+     /* width: 500px;*/
+}
+
+/*.count-down*/ .display-date {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%; 
+    grid-gap: 5%;
+    justify-content: space-around;
+    width: 600px;
+
+}
+
+.count-down .display-date div {
+    
+    font-size: 3em;
+    font-weight: 700;
+  border: solid #E89D01 6px;
+  width: 100%;
+padding:  0;
+}
+
+.count-down .display-date div span {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 200;
+}
+
+/* Social Media, Contact Us Embeded */
+
+.flex-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 25%;
+}
+
+.flex-container img {
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    margin: 0px;
+}
+
+.flex-container a {
+    padding: 0px;
+    margin: 0px;
+    width: 30%;
+}
+
+.flex-container ul {
+    padding: 0px;
+    margin: 0px;
+     display: inline-flex;
+}
